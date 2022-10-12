@@ -38,6 +38,7 @@
   "require-dev": {
     "craftcms/ecs": "dev-main",
     "craftcms/phpstan": "dev-main",
+    "markhuot/craft-pest": "dev-master",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
@@ -55,7 +56,8 @@
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
-      "craftcms/plugin-installer": true
+      "craftcms/plugin-installer": true,
+      "pestphp/pest-plugin": true
     }
   },
   "scripts": {

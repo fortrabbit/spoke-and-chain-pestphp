@@ -4,6 +4,7 @@
 /vendor
 /node_modules
 .DS_Store
+.phpunit.result.cache
 !seed.sql
 /web/cpresources
 
