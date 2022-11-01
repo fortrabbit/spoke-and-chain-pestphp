@@ -27,8 +27,6 @@ test('no errors', function ($url) {
     '/bikes',
     '/services',
     '/articles',
-    '/lost-page',
     '/contact'
-
 ]);
 

@@ -10056,12 +10056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/markhuot/craft-pest.git",
-                "reference": "017077c9db2315f8406578325eda7702558841fa"
+                "reference": "e7e6e4bc04978778c8660675b1b81fcd08adbd9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markhuot/craft-pest/zipball/017077c9db2315f8406578325eda7702558841fa",
-                "reference": "017077c9db2315f8406578325eda7702558841fa",
+                "url": "https://api.github.com/repos/markhuot/craft-pest/zipball/e7e6e4bc04978778c8660675b1b81fcd08adbd9e",
+                "reference": "e7e6e4bc04978778c8660675b1b81fcd08adbd9e",
                 "shasum": ""
             },
             "require": {
@@ -10073,7 +10073,8 @@
                 "symfony/css-selector": "^5.3|^6.0",
                 "symfony/dom-crawler": "^6.0.3",
                 "symfony/process": "^5.3|^6.0",
-                "vlucas/phpdotenv": "^2.4|^3.4|^5.4"
+                "vlucas/phpdotenv": "^2.4|^3.4|^5.4",
+                "yiisoft/yii2-shell": "^2.0"
             },
             "require-dev": {
                 "craftcms/phpstan": "dev-main",
@@ -10120,9 +10121,9 @@
             "description": "A Pest runner",
             "support": {
                 "issues": "https://github.com/markhuot/craft-pest/issues",
-                "source": "https://github.com/markhuot/craft-pest/tree/1.0.0-alpha7"
+                "source": "https://github.com/markhuot/craft-pest/tree/master"
             },
-            "time": "2022-10-11T12:16:56+00:00"
+            "time": "2022-10-30T15:35:52+00:00"
         },
         {
             "name": "mockery/mockery",
