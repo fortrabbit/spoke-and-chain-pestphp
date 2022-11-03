@@ -15,9 +15,9 @@ test('full checkout process as a guest', function($newUser) {
         ->form('#guest-checkout')
         ->fill('email', $newUser->email)
         ->submit()
-        ->assertRedirectTo('/checkout/address');
-
-    $next->request->enableCookieValidation = false;
+        ->assertRedirectTo('/checkout/address')
+        ->assertFlash('Cart updated.')
+        ->followRedirect();
 
     // 3. Address form
     $next = $next
@@ -28,14 +28,15 @@ test('full checkout process as a guest', function($newUser) {
         ->fill('shippingAddress[locality]', $newUser->locality)
         ->fill('shippingAddress[postalCode]', $newUser->postalCode)
         ->select('shippingAddress[countryCode]', $newUser->countryCode)
+        ->tick('billingAddressSameAsShipping')
         ->submit()
         ->assertRedirectTo('/checkout/shipping')
         ->followRedirect();
 
     // 4. Shipping form
     $next = $next
-        ->form('#checkout-shipping')
-        ->tick('shippingMethodHandle', 'freeShipping')
+        ->form('#checkout-shipping-method')
+        ->select('shippingMethodHandle', 'freeShipping')
         ->submit()
         ->assertRedirectTo('/checkout/summary')
         ->followRedirect();
@@ -49,8 +50,9 @@ test('full checkout process as a guest', function($newUser) {
         ->fill('paymentForm[dummy][expiry]', $newUser->cardExpiry)
         ->fill('paymentForm[dummy][cvv]', $newUser->cardCvv)
         ->submit()
-        ->assertRedirectTo('/checkout/success?number=*')
+        ->assertRedirect()
         ->followRedirect();
+
 
     // 6. Finally
     $next
@@ -58,7 +60,7 @@ test('full checkout process as a guest', function($newUser) {
         ->assertText('Success');
 
 })->with([
-    (object) [
+    'Ben David, France' => (object) [
         'email' => 'ben@craftcms.com',
         'firstName' => 'Ben',
         'lastName' => 'David',

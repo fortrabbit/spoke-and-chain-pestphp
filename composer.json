@@ -38,7 +38,7 @@
   "require-dev": {
     "craftcms/ecs": "dev-main",
     "craftcms/phpstan": "dev-main",
-    "markhuot/craft-pest": "dev-master",
+    "markhuot/craft-pest": "dev-cookies",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {

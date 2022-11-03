@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "efa57b6e5aac0bc4f7cce286d342035b",
+    "content-hash": "690cd56aaa49f5cf5f0fafa6b9d58e83",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -10136,16 +10136,16 @@
         },
         {
             "name": "markhuot/craft-pest",
-            "version": "dev-master",
+            "version": "dev-cookies",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markhuot/craft-pest.git",
-                "reference": "e7e6e4bc04978778c8660675b1b81fcd08adbd9e"
+                "reference": "54a6cf13a4610038c69c54807172db24b0a15c38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markhuot/craft-pest/zipball/e7e6e4bc04978778c8660675b1b81fcd08adbd9e",
-                "reference": "e7e6e4bc04978778c8660675b1b81fcd08adbd9e",
+                "url": "https://api.github.com/repos/markhuot/craft-pest/zipball/54a6cf13a4610038c69c54807172db24b0a15c38",
+                "reference": "54a6cf13a4610038c69c54807172db24b0a15c38",
                 "shasum": ""
             },
             "require": {
@@ -10164,7 +10164,6 @@
                 "craftcms/phpstan": "dev-main",
                 "symfony/var-dumper": "^5.0|^6.0"
             },
-            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
                 "name": "Pest",
@@ -10205,9 +10204,9 @@
             "description": "A Pest runner",
             "support": {
                 "issues": "https://github.com/markhuot/craft-pest/issues",
-                "source": "https://github.com/markhuot/craft-pest/tree/master"
+                "source": "https://github.com/markhuot/craft-pest/tree/cookies"
             },
-            "time": "2022-10-30T15:35:52+00:00"
+            "time": "2022-11-03T03:40:36+00:00"
         },
         {
             "name": "mockery/mockery",
