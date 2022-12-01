@@ -28,6 +28,8 @@ test('full checkout process as a guest', function($newUser) {
         ->fill('shippingAddress[locality]', $newUser->locality)
         ->fill('shippingAddress[postalCode]', $newUser->postalCode)
         ->select('shippingAddress[countryCode]', $newUser->countryCode)
+        // add virtual field
+        ->addField('shippingAddress[administrativeArea]', $newUser->administrativeArea)
         ->tick('billingAddressSameAsShipping')
         ->submit()
         ->assertRedirectTo('/checkout/shipping')
@@ -60,16 +62,21 @@ test('full checkout process as a guest', function($newUser) {
         ->assertText('Success');
 
 })->with([
-    'Ben David, France' => (object) [
-        'email' => 'ben@craftcms.com',
-        'firstName' => 'Ben',
-        'lastName' => 'David',
-        'addressLine1' => '13 rue des Papillons',
-        'locality' => 'Grenoble',
-        'postalCode' => '38000',
-        'countryCode' => 'FR',
+
+    'Tim Kelty, USA' => (object) [
+        'email' => 'tim@craftcms.com',
+        'firstName' => 'Tim',
+        'lastName' => 'Kelty',
+        'addressLine1' => 'Garfield Park',
+        'locality' => 'Grand Rapids',
+        'postalCode' => '44444',
+        'countryCode' => 'US',
+        'administrativeArea' => 'MI',
         'cardNumber' => '4242424242424242',
         'cardExpiry' => '03/2026',
         'cardCvv' => '123',
-    ]
+    ],
+
+
+
 ]);

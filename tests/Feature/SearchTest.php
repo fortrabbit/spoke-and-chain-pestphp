@@ -10,11 +10,11 @@ it('finds two articles with matching keyword', function () {
     // Result: count items
     $response
         ->querySelector('.article-card')
-        ->expect()
-        ->toHaveCount(2);
+        ->assertCount(2);
 
     // Result: assert text
-    expect($response->querySelector('.article-card')->getText())
+    $articleCards = $response->querySelector('.article-card');
+    expect($articleCards->getText())
         ->each()
         ->toContain('Pine Mountain');
 });
